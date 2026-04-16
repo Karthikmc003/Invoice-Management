@@ -349,6 +349,22 @@
 
 </div>
 
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBXer6LM1kTfOUmthDM9-Lc5CQUar7gk04",
+    authDomain: "invoice-management-63e0e.firebaseapp.com",
+    projectId: "invoice-management-63e0e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+</script>
+
 <script>
     // --- State Management ---
     let invoices = JSON.parse(localStorage.getItem('eac_invoices')) || [];
